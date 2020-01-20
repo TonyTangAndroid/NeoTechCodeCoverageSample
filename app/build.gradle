@@ -5,6 +5,12 @@ plugins {
 
 android {
 
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
     compileSdkVersion projectVersion.compileSdk
     defaultConfig {
         applicationId "org.neotech.app"
@@ -24,6 +30,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
@@ -32,6 +42,10 @@ dependencies {
     implementation projectDependency.appCompat
 
     testImplementation projectDependency.junit
+    testImplementation projectDependency.robolectric
+    testImplementation projectDependency.truth
+    testImplementation projectDependency.supportTestCore
+    androidTestImplementation projectDependency.truth
     androidTestImplementation projectDependency.supportTestRunner
     androidTestImplementation projectDependency.supportTestRules
     androidTestImplementation projectDependency.espressoCore
