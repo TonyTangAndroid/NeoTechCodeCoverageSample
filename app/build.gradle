@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+    id 'jacoco'
+}
+
+android {
+
+    compileSdkVersion projectVersion.compileSdk
+    defaultConfig {
+        applicationId "org.neotech.app"
+        minSdkVersion projectVersion.minSdk
+        targetSdkVersion projectVersion.compileSdk
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project(":library_android")
+
+    implementation projectDependency.appCompat
+
+    testImplementation projectDependency.junit
+    androidTestImplementation projectDependency.supportTestRunner
+    androidTestImplementation projectDependency.supportTestRules
+    androidTestImplementation projectDependency.espressoCore
+    androidTestImplementation projectDependency.androidJUnit
+}

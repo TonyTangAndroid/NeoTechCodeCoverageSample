@@ -1,0 +1,39 @@
+buildscript {
+
+    apply from: "${rootDir}/gradle/dependencies.gradle"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.jacoco:org.jacoco.core:0.8.5'
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'org.neotech.plugin:android-root-coverage-plugin:1.2.0'
+    }
+}
+apply plugin: 'jacoco'
+jacoco { toolVersion = '0.8.5' }
+
+apply plugin: 'org.neotech.plugin.rootcoverage'
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+rootCoverage {
+    buildVariant "debug"
+    excludes = ["**/ignored/**"]
+    executeTests true
+    executeAndroidTests true
+    executeUnitTests true
+    generateXml true
+    includeAndroidTestResults true
+    includeUnitTestResults true
+}
