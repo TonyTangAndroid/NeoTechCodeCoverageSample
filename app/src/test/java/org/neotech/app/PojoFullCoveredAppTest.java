@@ -11,7 +11,7 @@ public class PojoFullCoveredAppTest {
     PojoFullCovered instance = new PojoFullCovered();
 
     instance.setThing("123");
-    Truth.assertThat(instance.coveredInApp()).isEqualTo("123");
+    Truth.assertThat(instance.expectedToBeCoveredInApp()).isEqualTo("123");
   }
 
 }

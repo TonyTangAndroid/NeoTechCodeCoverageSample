@@ -12,7 +12,7 @@ public class PojoFullCovered {
     return thing;
   }
 
-  public Object coveredInApp() {
+  public Object expectedToBeCoveredInApp() {
     return thing;
   }
 }
