@@ -9,6 +9,8 @@ public class PartCoveredTest {
   @Test
   public void getThing() {
 
-    Truth.assertThat(new PartCovered().expectedToBeCoveredInApp()).isEqualTo("Part Covered");
+    PartCovered partCovered = new PartCovered();
+    partCovered.setThing("123");
+    Truth.assertThat(partCovered.expectedToBeCoveredInApp()).isEqualTo("123");
   }
 }
