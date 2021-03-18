@@ -33,6 +33,6 @@ public class MainActivityUnitTest {
   }
 
   private void verifyNameCorrect(MainActivity activity) {
-    assertThat(activity.activityNameForRobolectricTest()).isEqualTo("MainActivity");
+    assertThat(activity.supposeToBeCoveredButNotCoveredInAppModule()).isEqualTo("MainActivity");
   }
 }

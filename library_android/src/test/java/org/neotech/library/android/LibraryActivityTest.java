@@ -51,6 +51,6 @@ public class LibraryActivityTest {
   }
 
   private void verifyNameCorrect(LibraryActivity activity) {
-    assertThat(activity.activityNameForRobolectricTest()).isEqualTo("LibraryActivity");
+    assertThat(activity.supposeToBeCoveredAndActuallyCoveredInLibraryModule()).isEqualTo("LibraryActivity");
   }
 }
