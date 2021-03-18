@@ -1,7 +1,8 @@
-package org.neotech.library.android;
+package org.neotech.app;
 
 import com.google.common.truth.Truth;
 import org.junit.Test;
+import org.neotech.library.android.PojoFullCovered;
 
 public class PojoFullCoveredTest {
 
