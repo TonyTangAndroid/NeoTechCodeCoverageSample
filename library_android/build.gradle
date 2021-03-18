@@ -6,6 +6,13 @@ plugins {
 android {
 
     compileSdkVersion projectVersion.compileSdk
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
     defaultConfig {
         minSdkVersion projectVersion.minSdk
         targetSdkVersion projectVersion.compileSdk
@@ -34,6 +41,9 @@ android {
 dependencies {
     implementation projectDependency.appCompat
 
+    testImplementation projectDependency.truth
+    testImplementation projectDependency.supportTestCore
+    testImplementation projectDependency.robolectric
     testImplementation projectDependency.junit
     androidTestImplementation projectDependency.supportTestRunner
     androidTestImplementation projectDependency.espressoCore
