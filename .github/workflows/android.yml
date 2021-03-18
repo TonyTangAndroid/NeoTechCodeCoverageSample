@@ -1,0 +1,26 @@
+name: Android Feature Branch CI
+
+on:
+  push:
+    branches:
+      - '*'
+jobs:
+  unit_test:
+    name: Run Unit Tests & Espresso Test
+    runs-on: macos-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: run java unit tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: ./gradlew rootCodeCoverageReport
+      - name: upload code coverage report
+        uses: codecov/codecov-action@v1.2.2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./build/reports/jacoco.xml
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
