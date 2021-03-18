@@ -1,13 +1,5 @@
-plugins {
-    id 'com.android.library'
-    id 'jacoco'
-}
-
-//Enable RobolectricTestRunner  https://github.com/NeoTech-Software/Android-Root-Coverage-Plugin/issues/18#issuecomment-576630461
-tasks.withType(Test) {
-    jacoco.includeNoLocationClasses = true
-}
-
+apply plugin: 'com.android.library'
+apply from: "${rootDir}/gradle/test.gradle"
 android {
 
     compileSdkVersion projectVersion.compileSdk
