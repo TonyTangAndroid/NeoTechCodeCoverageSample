@@ -10,7 +10,7 @@ import org.neotech.library.a.R;
 public class LibraryActivity extends AppCompatActivity implements View.OnClickListener {
 
   private TextView text;
-  private PojoFullCovered pojoMissed;
+  private PojoFullCovered pojoFullCovered;
 
   @Override
   protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,8 +27,8 @@ public class LibraryActivity extends AppCompatActivity implements View.OnClickLi
     if (v.getId() == R.id.button) {
       text.setText("Hello Library!");
     } else {
-      pojoMissed = new PojoFullCovered();
-      pojoMissed.setThing("test");
+      pojoFullCovered = new PojoFullCovered();
+      pojoFullCovered.setThing("test");
       v.setVisibility(View.GONE);
     }
   }
