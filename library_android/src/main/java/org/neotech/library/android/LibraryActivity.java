@@ -33,7 +33,11 @@ public class LibraryActivity extends AppCompatActivity implements View.OnClickLi
     }
   }
 
-  public String activityNameForRobolectricTest() {
+  public String supposeToBeCoveredAndActuallyCoveredInLibraryModule() {
+    return "LibraryActivity";
+  }
+
+  public String notCovered() {
     return "LibraryActivity";
   }
 }

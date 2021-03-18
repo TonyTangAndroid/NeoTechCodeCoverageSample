@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
   }
 
-  public String activityNameForRobolectricTest() {
+  public String supposeToBeCoveredButNotCoveredInAppModule() {
     return "MainActivity";
   }
 }
