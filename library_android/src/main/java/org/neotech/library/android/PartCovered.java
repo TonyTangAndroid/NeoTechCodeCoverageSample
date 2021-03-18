@@ -1,16 +1,14 @@
 package org.neotech.library.android;
 
-public class PojoFullCovered {
+public class PartCovered {
 
-  private String thing = "default string";
+  private String thing = "Part Covered";
 
   public void setThing(String thing) {
     this.thing = thing;
   }
 
   public String getThing() {
-    return thing;
-  }  public String notCovered() {
     return thing;
   }
 

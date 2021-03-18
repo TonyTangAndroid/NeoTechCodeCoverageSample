@@ -1,6 +1,6 @@
 package org.neotech.library.android;
 
-public class PojoFullCovered {
+public class PojoNotCoveredAtAll {
 
   private String thing = "default string";
 
@@ -9,8 +9,6 @@ public class PojoFullCovered {
   }
 
   public String getThing() {
-    return thing;
-  }  public String notCovered() {
     return thing;
   }
 
