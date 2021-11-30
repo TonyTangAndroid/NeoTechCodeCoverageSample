@@ -15,7 +15,7 @@ jobs:
         uses: reactivecircus/android-emulator-runner@v2
         with:
           api-level: 29
-          script: ./gradlew rootCodeCoverageReport
+          script: ./gradlew rootCoverageReport
       - name: upload code coverage report
         uses: codecov/codecov-action@v1.2.2
         with:
