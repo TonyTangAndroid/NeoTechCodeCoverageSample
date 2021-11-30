@@ -30,7 +30,7 @@ rootCoverage {
     executeAndroidTests true
     executeUnitTests true
     generateXml true
-    includeAndroidTestResults true
+    includeAndroidTestResults false
     includeUnitTestResults true
     includeNoLocationClasses true
 }
