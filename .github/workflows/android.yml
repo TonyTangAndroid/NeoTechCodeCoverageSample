@@ -16,10 +16,7 @@ jobs:
           distribution: 'zulu'
           java-version: 8
       - name: run java unit tests
-        uses: ReactiveCircus/android-emulator-runner@v2.21.0
-        with:
-          api-level: 28
-          script: ./gradlew rootCoverageReport
+        run: ./gradlew rootCoverageReport
       - name: upload code coverage report
         uses: codecov/codecov-action@v2.1.0
         with:
