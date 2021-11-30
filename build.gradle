@@ -32,5 +32,7 @@ rootCoverage {
     generateXml true
     includeAndroidTestResults false
     includeUnitTestResults true
+    // Also need to  `apply plugin: 'jacoco'` at the application module to make robolectric unit test code coverage effective
     includeNoLocationClasses true
+
 }
