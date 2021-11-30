@@ -32,5 +32,6 @@ rootCoverage {
     generateXml true
     includeAndroidTestResults false
     includeUnitTestResults true
+    includeNoLocationClasses true
 
 }
