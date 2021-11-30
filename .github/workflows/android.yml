@@ -14,11 +14,11 @@ jobs:
       - uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
-          java-version: 8
+          java-version: 11
       - name: run java unit tests
         uses: ReactiveCircus/android-emulator-runner@v2.21.0
         with:
-          api-level: 28
+          api-level: 29
           script: ./gradlew rootCoverageReport
       - name: upload code coverage report
         uses: codecov/codecov-action@v2.1.0
