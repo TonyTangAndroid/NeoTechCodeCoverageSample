@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
-./gradlew clean rootCoverageReport
+./gradlew clean
+./gradlew rootCoverageReport
 open ./build/reports/jacoco/index.html
